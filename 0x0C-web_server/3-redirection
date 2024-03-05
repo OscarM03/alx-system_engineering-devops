@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Install nginx web server
+
+# Update the server
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get install nginx -y
+
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee   /var/www/html/index.html
+
+string_to_replace = "server_name _;\n\trewrite ^\/redirect_me https://www.facesofalxse.com permanent;"
+sudo sed -i "s/server_name _;/$string_to_replace/" /etc/nginx/sites-available/default
+# Restart nginx
+sudo service nginx reload
