@@ -5,7 +5,7 @@
 MYSQL_PASSWORD="$1"
 
 # Get the current date in the specified format
-DATE_FORMAT=$(date +"%d-%m-%y")
+DATE_FORMAT=$(date +"%d-%m-%Y")
 
 # Construct the filename for the backup archive
 FILE_NAME="$DATE_FORMAT.tar.gz"
