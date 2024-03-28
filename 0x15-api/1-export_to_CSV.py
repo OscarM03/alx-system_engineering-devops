@@ -36,7 +36,7 @@ def get_user_data(id):
             completed = task.get('completed')
             user_id = task.get('userId')
             title = task.get('title')
-            csv_file.write('"{}", "{}", "{}", "{}"\n'.format(
+            csv_file.write('"{}","{}","{}","{}"\n'.format(
                 user_id, name, completed, title))
 
 
